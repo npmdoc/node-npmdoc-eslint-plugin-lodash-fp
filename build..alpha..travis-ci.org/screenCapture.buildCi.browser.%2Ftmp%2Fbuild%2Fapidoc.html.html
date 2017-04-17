@@ -1,0 +1,1410 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/jfmengels/eslint-plugin-lodash-fp#readme">eslint-plugin-lodash-fp (v2.1.3)</a>
+</h1>
+<h4>ESLint rules for lodash/fp</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp">module eslint-plugin-lodash-fp</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>configs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>consistent_compose</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>consistent_name</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>no_argumentless_calls</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>no_chain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>no_extraneous_args</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>no_extraneous_function_wrapping</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>no_extraneous_iteratee_args</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>no_for_each</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>no_partial_of_curried</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>no_single_composition</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>no_submodule_destructuring</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>no_unused_result</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>prefer_compact</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>prefer_composition_grouping</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>prefer_constant</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>prefer_flat_map</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>prefer_get</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>prefer_identity</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>preferred_alias</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>rules</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>use_fp</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.consistent_compose">module eslint-plugin-lodash-fp.consistent_compose</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.consistent_compose.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.consistent_compose.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.consistent_compose.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.consistent_name">module eslint-plugin-lodash-fp.consistent_name</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.consistent_name.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.consistent_name.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.consistent_name.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.no_argumentless_calls">module eslint-plugin-lodash-fp.no_argumentless_calls</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.no_argumentless_calls.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_argumentless_calls.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_argumentless_calls.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.no_chain">module eslint-plugin-lodash-fp.no_chain</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.no_chain.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_chain.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_chain.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.no_extraneous_args">module eslint-plugin-lodash-fp.no_extraneous_args</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.no_extraneous_args.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_extraneous_args.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_extraneous_args.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.no_extraneous_function_wrapping">module eslint-plugin-lodash-fp.no_extraneous_function_wrapping</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.no_extraneous_function_wrapping.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_extraneous_function_wrapping.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_extraneous_function_wrapping.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.no_extraneous_iteratee_args">module eslint-plugin-lodash-fp.no_extraneous_iteratee_args</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.no_extraneous_iteratee_args.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_extraneous_iteratee_args.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_extraneous_iteratee_args.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.no_for_each">module eslint-plugin-lodash-fp.no_for_each</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.no_for_each.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_for_each.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_for_each.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.no_partial_of_curried">module eslint-plugin-lodash-fp.no_partial_of_curried</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.no_partial_of_curried.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_partial_of_curried.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_partial_of_curried.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.no_single_composition">module eslint-plugin-lodash-fp.no_single_composition</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.no_single_composition.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_single_composition.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_single_composition.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.no_submodule_destructuring">module eslint-plugin-lodash-fp.no_submodule_destructuring</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.no_submodule_destructuring.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_submodule_destructuring.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_submodule_destructuring.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.no_unused_result">module eslint-plugin-lodash-fp.no_unused_result</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.no_unused_result.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_unused_result.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_unused_result.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.prefer_compact">module eslint-plugin-lodash-fp.prefer_compact</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.prefer_compact.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.prefer_compact.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.prefer_compact.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.prefer_composition_grouping">module eslint-plugin-lodash-fp.prefer_composition_grouping</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.prefer_composition_grouping.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.prefer_composition_grouping.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.prefer_composition_grouping.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.prefer_constant">module eslint-plugin-lodash-fp.prefer_constant</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.prefer_constant.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.prefer_constant.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.prefer_constant.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.prefer_flat_map">module eslint-plugin-lodash-fp.prefer_flat_map</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.prefer_flat_map.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.prefer_flat_map.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.prefer_flat_map.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.prefer_get">module eslint-plugin-lodash-fp.prefer_get</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.prefer_get.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.prefer_get.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.prefer_get.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.prefer_identity">module eslint-plugin-lodash-fp.prefer_identity</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.prefer_identity.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.prefer_identity.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.prefer_identity.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.preferred_alias">module eslint-plugin-lodash-fp.preferred_alias</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.preferred_alias.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.preferred_alias.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.preferred_alias.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.use_fp">module eslint-plugin-lodash-fp.use_fp</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.use_fp.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.use_fp.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.use_fp.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp" id="apidoc.module.eslint-plugin-lodash-fp">module eslint-plugin-lodash-fp</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.consistent_compose" id="apidoc.module.eslint-plugin-lodash-fp.consistent_compose">module eslint-plugin-lodash-fp.consistent_compose</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.consistent_compose.create" id="apidoc.element.eslint-plugin-lodash-fp.consistent_compose.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.consistent_compose.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const info = enhance();
+  const composeMethod = context.options[0];
+  if (!composeMethod) {
+    return {};
+  }
+
+  return info.merge({
+    CallExpression: function (node) {
+      const method = info.helpers.isComposeMethod(node);
+      if (method &amp;&amp; method.name !== composeMethod) {
+        context.report(node, `Forbidden use of \`${method.name}\`. Use \`${composeMethod}\` instead`);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.consistent_name" id="apidoc.module.eslint-plugin-lodash-fp.consistent_name">module eslint-plugin-lodash-fp.consistent_name</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.consistent_name.create" id="apidoc.element.eslint-plugin-lodash-fp.consistent_name.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.consistent_name.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const info = enhance();
+  const expectedName = context.options[0] || '_';
+  let importNode = null;
+
+  return info.merge({
+    ImportDeclaration: function (node) {
+      if (isLodash(node.source.value) &amp;&amp; hasDefaultSpecifier(node)) {
+        importNode = node;
+      }
+    },
+    VariableDeclarator: function (node) {
+      if (node.init &amp;&amp; astUtils.isStaticRequire(node.init)) {
+        if (isLodash(node.init.arguments[0].value)) {
+          importNode = node;
+        }
+      }
+    },
+    'Program:exit': function () {
+      const importValues = _.values(info.imports);
+      if (// `lodash`/`lodash/fp` was imported
+        (importValues.indexOf('') !== -1 || importValues.indexOf('fp') !== -1) &amp;&amp;
+        // but &lt;expectedName&gt; does not refer to either `lodash` or `lodash/fp`
+        !info.helpers.isAnyLodash(expectedName)
+      ) {
+        context.report(importNode, `Lodash should be imported as \`${expectedName}\``);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.no_argumentless_calls" id="apidoc.module.eslint-plugin-lodash-fp.no_argumentless_calls">module eslint-plugin-lodash-fp.no_argumentless_calls</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.no_argumentless_calls.create" id="apidoc.element.eslint-plugin-lodash-fp.no_argumentless_calls.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_argumentless_calls.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const info = enhance();
+
+  return info.merge({
+    CallExpression: function (node) {
+      if (node.arguments.length !== 0) {
+        return;
+      }
+      const method = info.helpers.isMethodCall(node);
+      if (method &amp;&amp; !_.includes(method.name, exceptions)) {
+        context.report(node, 'No call without arguments');
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.no_chain" id="apidoc.module.eslint-plugin-lodash-fp.no_chain">module eslint-plugin-lodash-fp.no_chain</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.no_chain.create" id="apidoc.element.eslint-plugin-lodash-fp.no_chain.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_chain.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const info = enhance();
+  const helpers = info.helpers;
+
+  return info.merge({
+    CallExpression: function (node) {
+      const callee = node.callee;
+      if (isLodashWrap(helpers, callee) || info.helpers.isAnyMethodOf('chain', callee)) {
+        context.report(node, 'Unallowed use of chain operations. Use flow/compose instead');
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.no_extraneous_args" id="apidoc.module.eslint-plugin-lodash-fp.no_extraneous_args">module eslint-plugin-lodash-fp.no_extraneous_args</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.no_extraneous_args.create" id="apidoc.element.eslint-plugin-lodash-fp.no_extraneous_args.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_extraneous_args.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const info = enhance();
+
+  return info.merge({
+    CallExpression: function (node) {
+      const method = info.helpers.isMethodCall(node);
+
+      if (method &amp;&amp; !method.skipFixed &amp;&amp; node.arguments.length &gt; method.ary) {
+        const alternative = getAlternative(method, node.arguments.length);
+        context.report(node, reportMessage(method, alternative));
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.no_extraneous_function_wrapping" id="apidoc.module.eslint-plugin-lodash-fp.no_extraneous_function_wrapping">module eslint-plugin-lodash-fp.no_extraneous_function_wrapping</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.no_extraneous_function_wrapping.create" id="apidoc.element.eslint-plugin-lodash-fp.no_extraneous_function_wrapping.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_extraneous_function_wrapping.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const info = enhance();
+
+  return info.merge({
+    FunctionDeclaration: function (node) {
+      if (isExtraneous(info, node)) {
+        context.report(node, errorMessage);
+      }
+    },
+    CallExpression: function (node) {
+      node.arguments
+        .filter(function (argNode) {
+          return isExtraneous(info, argNode);
+        })
+        .forEach(function (arg) {
+          context.report(arg, errorMessage);
+        });
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.no_extraneous_iteratee_args" id="apidoc.module.eslint-plugin-lodash-fp.no_extraneous_iteratee_args">module eslint-plugin-lodash-fp.no_extraneous_iteratee_args</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.no_extraneous_iteratee_args.create" id="apidoc.element.eslint-plugin-lodash-fp.no_extraneous_iteratee_args.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_extraneous_iteratee_args.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const info = enhance();
+
+  return info.merge({
+    CallExpression: function (node) {
+      const method = info.helpers.isMethodCall(node);
+      if (!method) {
+        return;
+      }
+
+      const nArgs = getFunctionArgumentsLength(node.arguments[method.iterateePos]);
+      if (nArgs &gt; method.iterateeAry) {
+        context.report(node,
+          `Too many parameters in \`${method.name}\`'s iteratee, it is only given ` +
+          `${method.iterateeAry} argument${method.iterateeAry === 1 ? '' : 's'}.`);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.no_for_each" id="apidoc.module.eslint-plugin-lodash-fp.no_for_each">module eslint-plugin-lodash-fp.no_for_each</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.no_for_each.create" id="apidoc.element.eslint-plugin-lodash-fp.no_for_each.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_for_each.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const info = enhance();
+  const options = context.options[0] || {};
+  const noNative = options.noNative !== false;
+
+  return info.merge({
+    CallExpression: function (node) {
+      const method = info.helpers.isForEachMethod(node);
+      if (method) {
+        context.report(node, `Forbidden use of \`_.${method.realName}\``);
+        return;
+      }
+
+      if (noNative &amp;&amp; isForEachCall(node.callee)) {
+        context.report(node, 'Forbidden use of native `forEach`');
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.no_partial_of_curried" id="apidoc.module.eslint-plugin-lodash-fp.no_partial_of_curried">module eslint-plugin-lodash-fp.no_partial_of_curried</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.no_partial_of_curried.create" id="apidoc.element.eslint-plugin-lodash-fp.no_partial_of_curried.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_partial_of_curried.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const info = enhance();
+
+  return info.merge({
+    CallExpression: function (node) {
+      const method = info.helpers.isMethodCallOf(['partial', 'partialRight'], node);
+      if (!method || node.arguments.length === 0) {
+        return;
+      }
+
+      const func = info.helpers.isMethod(node.arguments[0]) || info.helpers.isMethodCall(node.arguments[0]);
+      if (func &amp;&amp; !func.skipFixed) {
+        context.report(node, `Don't use partial on a curried method`);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.no_single_composition" id="apidoc.module.eslint-plugin-lodash-fp.no_single_composition">module eslint-plugin-lodash-fp.no_single_composition</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.no_single_composition.create" id="apidoc.element.eslint-plugin-lodash-fp.no_single_composition.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_single_composition.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const info = enhance();
+
+  return info.merge({
+    CallExpression: function (node) {
+      const method = info.helpers.isComposeMethod(node);
+      if (!method || node.arguments.length &gt; 1 || _.get([0, 'type'], node.arguments) === 'SpreadElement') {
+        return;
+      }
+
+      // _.flow accepts array of Functions, check that we have more than one Function
+      const isArrayExpression = _.get([0, 'type'], node.arguments) === 'ArrayExpression';
+      if (isArrayExpression &amp;&amp; _.get([0, 'elements', 'length'], node.arguments) &gt; 1) {
+        return;
+      }
+
+      context.report({
+        node,
+        message: `\`${method.name}\` should have at least two ${isArrayExpression ? 'functions' : 'arguments'}`
+      });
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.no_submodule_destructuring" id="apidoc.module.eslint-plugin-lodash-fp.no_submodule_destructuring">module eslint-plugin-lodash-fp.no_submodule_destructuring</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.no_submodule_destructuring.create" id="apidoc.element.eslint-plugin-lodash-fp.no_submodule_destructuring.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_submodule_destructuring.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const info = enhance();
+
+  return info.merge({
+    ImportDeclaration: function (node) {
+      if (isLodashSubModule(node.source.value)) {
+        const importSpecifier = _.find(isImportSpecifier, node.specifiers);
+        if (importSpecifier) {
+          context.report(importSpecifier, errorMessage);
+        }
+      }
+    },
+    VariableDeclarator: function (node) {
+      if (node.init &amp;&amp; isObjectPattern(node.id) &amp;&amp; isRequireOfLodashSubModule(node.init)) {
+        context.report(node.init, errorMessage);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.no_unused_result" id="apidoc.module.eslint-plugin-lodash-fp.no_unused_result">module eslint-plugin-lodash-fp.no_unused_result</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.no_unused_result.create" id="apidoc.element.eslint-plugin-lodash-fp.no_unused_result.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.no_unused_result.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const info = enhance();
+
+  return info.merge({
+    ExpressionStatement: function (node) {
+      const method = isMethodCall(info, node.expression);
+      if (method &amp;&amp; !isForEach(method)) {
+        context.report(node, 'Unused expression');
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.prefer_compact" id="apidoc.module.eslint-plugin-lodash-fp.prefer_compact">module eslint-plugin-lodash-fp.prefer_compact</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.prefer_compact.create" id="apidoc.element.eslint-plugin-lodash-fp.prefer_compact.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.prefer_compact.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const info = enhance();
+
+  const isFilterCall = info.helpers.isMethodCallOf('filter');
+
+  function isIdentity(node) {
+    return info.helpers.isMethodOf('identity', node) ||
+      astUtil.isIdentityFunction(node);
+  }
+
+  function isFilterWithIdentity(node) {
+    return isFilterCall(node) &amp;&amp; isIdentity(node.arguments[0]);
+  }
+
+  return info.merge({
+    CallExpression: function (node) {
+      if (isFilterWithIdentity(node)) {
+        context.report(node, 'Prefer `_.compact` over `_.filter` with identity function');
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.prefer_composition_grouping" id="apidoc.module.eslint-plugin-lodash-fp.prefer_composition_grouping">module eslint-plugin-lodash-fp.prefer_composition_grouping</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.prefer_composition_grouping.create" id="apidoc.element.eslint-plugin-lodash-fp.prefer_composition_grouping.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.prefer_composition_grouping.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const info = enhance();
+
+  return info.merge({
+    CallExpression: function (node) {
+      const method = info.helpers.isComposeMethod(node);
+      if (!method) {
+        return;
+      }
+      const methods = info.helpers.getComposeMethodArgMethods(method.name, node);
+      consecutiveOperations(methods).forEach(function (operation) {
+        context.report(node, errorMessage(operation));
+      });
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.prefer_constant" id="apidoc.module.eslint-plugin-lodash-fp.prefer_constant">module eslint-plugin-lodash-fp.prefer_constant</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.prefer_constant.create" id="apidoc.element.eslint-plugin-lodash-fp.prefer_constant.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.prefer_constant.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const options = context.options[0] || {};
+  const shouldCheckArrowFunctions = options.arrowFunctions === true;
+
+  function isCompletelyLiteral(node) {
+    switch (node.type) {
+      case 'Literal':
+        return true;
+      case 'BinaryExpression':
+        return isCompletelyLiteral(node.left) &amp;&amp; isCompletelyLiteral(node.right);
+      case 'UnaryExpression':
+        return isCompletelyLiteral(node.argument);
+      case 'ConditionalExpression':
+        return isCompletelyLiteral(node.test) &amp;&amp; isCompletelyLiteral(node.consequent) &amp;&amp; isCompletelyLiteral(node.alternate);
+      default:
+        return false;
+    }
+  }
+
+  function handleFunctionExpression(node) {
+    const valueReturnedInFirstLine = astUtil.getValueReturnedInFirstLine(node);
+    if (valueReturnedInFirstLine &amp;&amp; isCompletelyLiteral(valueReturnedInFirstLine)) {
+      context.report(node, 'Prefer `_.constant` over a function returning a literal');
+    }
+  }
+
+  return {
+    FunctionExpression: handleFunctionExpression,
+    FunctionDeclaration: handleFunctionExpression,
+    ArrowFunctionExpression: function (node) {
+      if (shouldCheckArrowFunctions) {
+        handleFunctionExpression(node);
+      }
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.prefer_flat_map" id="apidoc.module.eslint-plugin-lodash-fp.prefer_flat_map">module eslint-plugin-lodash-fp.prefer_flat_map</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.prefer_flat_map.create" id="apidoc.element.eslint-plugin-lodash-fp.prefer_flat_map.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.prefer_flat_map.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const info = enhance();
+
+  const isFlattenCall = info.helpers.isMethodCallOf('flatten');
+  const isMapCall = info.helpers.isMethodCallOf('map');
+
+  function isDirectCall(node) {
+    return isFlattenCall(node) &amp;&amp; isMapCall(node.arguments[0]);
+  }
+
+  function isCompositionCall(info, node) {
+    const composeMethod = info.helpers.isComposeMethod(node);
+    if (!composeMethod) {
+      return composeMethod;
+    }
+
+    const methods = info.helpers.getComposeMethodArgMethods(composeMethod.name, node);
+    return hasConsecutiveMapAndFlatten(_.map('name', methods));
+  }
+
+  return info.merge({
+    CallExpression: function (node) {
+      if (isDirectCall(node) || isCompositionCall(info, node)) {
+        context.report(node, 'Prefer `_.flatMap` over consecutive `_.map` and `_.flatten`');
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.prefer_get" id="apidoc.module.eslint-plugin-lodash-fp.prefer_get">module eslint-plugin-lodash-fp.prefer_get</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.prefer_get.create" id="apidoc.element.eslint-plugin-lodash-fp.prefer_get.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.prefer_get.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const DEFAULT_LENGTH = 3;
+  const ruleDepth = parseInt(context.options[0], 10) || DEFAULT_LENGTH;
+
+  const expStates = [];
+  function getState() {
+    return expStates[expStates.length - 1] || {depth: 0};
+  }
+
+<span class="apidocCodeCommentSpan">  /* eslint quote-props: [2, "as-needed"] */
+</span>  return {
+    LogicalExpression: function (node) {
+      const state = getState();
+      const rightMemberExp = astUtil.isEqEqEq(node.right) &amp;&amp; state.depth === 0 ? node.right.left : node.right;
+
+      if (shouldCheckDeeper(node, rightMemberExp, state.node)) {
+        expStates.push({depth: state.depth + 1, node: rightMemberExp.object});
+        if (astUtil.isEquivalentExp(node.left, rightMemberExp.object) &amp;&amp; state.depth &gt;= ruleDepth - 2) {
+          context.report(node, 'Prefer `_.get` or `_.has` over an `&amp;&amp;` chain');
+        }
+      }
+    },
+    'LogicalExpression:exit': function (node) {
+      const state = getState();
+      if (state &amp;&amp; state.node === node.right.object) {
+        expStates.pop();
+      }
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.prefer_identity" id="apidoc.module.eslint-plugin-lodash-fp.prefer_identity">module eslint-plugin-lodash-fp.prefer_identity</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.prefer_identity.create" id="apidoc.element.eslint-plugin-lodash-fp.prefer_identity.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.prefer_identity.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const options = context.options[0] || {};
+  const shouldCheckArrowFunctions = options.arrowFunctions === true;
+
+  function handleFunctionExpression(node) {
+    if (astUtil.isIdentityFunction(node)) {
+      context.report(node, 'Prefer `_.identity` over a function returning its argument');
+    }
+  }
+
+  return {
+    FunctionExpression: handleFunctionExpression,
+    FunctionDeclaration: handleFunctionExpression,
+    ArrowFunctionExpression: function (node) {
+      if (shouldCheckArrowFunctions) {
+        handleFunctionExpression(node);
+      }
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.preferred_alias" id="apidoc.module.eslint-plugin-lodash-fp.preferred_alias">module eslint-plugin-lodash-fp.preferred_alias</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.preferred_alias.create" id="apidoc.element.eslint-plugin-lodash-fp.preferred_alias.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.preferred_alias.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const options = context.options[0] || {};
+  const overrides = options.overrides || [];
+  checkOverrides(overrides);
+  const info = enhance();
+
+  return info.merge({
+    CallExpression: function (node) {
+      const method = info.helpers.isMethodCall(node);
+      if (!method) {
+        return;
+      }
+      const alias = wantedAlias(overrides, method);
+      if (alias !== method.name) {
+        context.report(node, `Use \`${alias}\` instead of \`${method.name}\`.`);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.use_fp" id="apidoc.module.eslint-plugin-lodash-fp.use_fp">module eslint-plugin-lodash-fp.use_fp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.use_fp.create" id="apidoc.element.eslint-plugin-lodash-fp.use_fp.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.use_fp.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context) {
+  const info = enhance();
+
+  return info.merge({
+    ImportDeclaration: function (node) {
+      reportIfLodashButNotFp(context, node, node.source.value);
+    },
+    CallExpression: function (node) {
+      if (astUtils.isStaticRequire(node)) {
+        reportIfLodashButNotFp(context, node, node.arguments[0].value);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
