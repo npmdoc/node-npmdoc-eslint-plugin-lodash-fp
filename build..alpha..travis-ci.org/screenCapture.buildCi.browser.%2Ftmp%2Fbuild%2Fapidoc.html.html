@@ -56,6 +56,12 @@
 
         <li>
 
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>ast_util</span>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>configs</span>
 
         </li>
@@ -183,6 +189,64 @@
         <li>
 
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.</span>use_fp</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-lodash-fp.ast_util">module eslint-plugin-lodash-fp.ast_util</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.ast_util.getValueReturnedInFirstLine">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.ast_util.</span>getValueReturnedInFirstLine
+            <span class="apidocSignatureSpan">(func)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.ast_util.isComputed">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.ast_util.</span>isComputed
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.ast_util.isEqEqEq">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.ast_util.</span>isEqEqEq
+            <span class="apidocSignatureSpan">(n, t)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.ast_util.isEquivalentExp">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.ast_util.</span>isEquivalentExp
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.ast_util.isFunction">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.ast_util.</span>isFunction
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-lodash-fp.ast_util.isIdentityFunction">
+            function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.ast_util.</span>isIdentityFunction
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
 
         </li>
 
@@ -615,6 +679,235 @@
 
 
 
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-lodash-fp.ast_util" id="apidoc.module.eslint-plugin-lodash-fp.ast_util">module eslint-plugin-lodash-fp.ast_util</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.ast_util.getValueReturnedInFirstLine" id="apidoc.element.eslint-plugin-lodash-fp.ast_util.getValueReturnedInFirstLine">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.ast_util.</span>getValueReturnedInFirstLine
+        <span class="apidocSignatureSpan">(func)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getValueReturnedInFirstLine(func) {
+  const firstLine = getFirstFunctionLine(func);
+  if (func) {
+    if (isFunctionDefinitionWithBlock(func)) {
+      return isReturnStatement(firstLine) ? firstLine.argument : null;
+    }
+    if (func.type === 'ArrowFunctionExpression') {
+      return firstLine;
+    }
+  }
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      return isCompletelyLiteral(node.test) &amp;&amp; isCompletelyLiteral(node.consequent) &amp;&amp; isCompletelyLiteral(node
+.alternate);
+    default:
+      return false;
+  }
+}
+
+function handleFunctionExpression(node) {
+  const valueReturnedInFirstLine = astUtil.<span class="apidocCodeKeywordSpan">getValueReturnedInFirstLine</span>(node);
+  if (valueReturnedInFirstLine &amp;&amp; isCompletelyLiteral(valueReturnedInFirstLine)) {
+    context.report(node, 'Prefer `_.constant` over a function returning a literal');
+  }
+}
+
+return {
+  FunctionExpression: handleFunctionExpression,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.ast_util.isComputed" id="apidoc.element.eslint-plugin-lodash-fp.ast_util.isComputed">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.ast_util.</span>isComputed
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isComputed(node) {
+  return _.get('computed', node) &amp;&amp; node.property.type !== 'Literal';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+const astUtil = require('./core/ast-util');
+
+function shouldCheckDeeper(node, nodeRight, toCompare) {
+return node.operator === '&amp;&amp;' &amp;&amp;
+  nodeRight &amp;&amp;
+  nodeRight.type === 'MemberExpression' &amp;&amp;
+  !astUtil.<span class="apidocCodeKeywordSpan">isComputed</span>(nodeRight) &amp;&amp;
+  (!toCompare || astUtil.isEquivalentExp(nodeRight, toCompare));
+}
+
+const create = function (context) {
+const DEFAULT_LENGTH = 3;
+const ruleDepth = parseInt(context.options[0], 10) || DEFAULT_LENGTH;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.ast_util.isEqEqEq" id="apidoc.element.eslint-plugin-lodash-fp.ast_util.isEqEqEq">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.ast_util.</span>isEqEqEq
+        <span class="apidocSignatureSpan">(n, t)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEqEqEq = function (n, t){
+<span class="apidocCodeCommentSpan">/* [wrapped with _.ary, _.curry, _.partial, &amp; _.rearg] */
+</span>return n===t||Pt(n,t,me(t))}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return expStates[expStates.length - 1] || {depth: 0};
+  }
+
+  /* eslint quote-props: [2, "as-needed"] */
+  return {
+    LogicalExpression: function (node) {
+const state = getState();
+const rightMemberExp = astUtil.<span class="apidocCodeKeywordSpan">isEqEqEq</span>(node.right) &amp;&amp; state.depth === 0 ?
+node.right.left : node.right;
+
+if (shouldCheckDeeper(node, rightMemberExp, state.node)) {
+  expStates.push({depth: state.depth + 1, node: rightMemberExp.object});
+  if (astUtil.isEquivalentExp(node.left, rightMemberExp.object) &amp;&amp; state.depth &gt;= ruleDepth - 2) {
+    context.report(node, 'Prefer `_.get` or `_.has` over an `&amp;&amp;` chain');
+  }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.ast_util.isEquivalentExp" id="apidoc.element.eslint-plugin-lodash-fp.ast_util.isEquivalentExp">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.ast_util.</span>isEquivalentExp
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isEquivalentExp(a, b) {
+  return _.isEqualWith(function (left, right, key) {
+    if (_.includes(key, ['loc', 'range', 'computed', 'start', 'end'])) {
+      return true;
+    }
+    if (isComputed(left) || isComputed(right)) {
+      return false;
+    }
+    if (key === 'property') {
+      const leftValue = left.name || left.value;
+      const rightValue = right.name || right.value;
+      return leftValue === rightValue;
+    }
+  }, a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+const astUtil = require('./core/ast-util');
+
+function shouldCheckDeeper(node, nodeRight, toCompare) {
+return node.operator === '&amp;&amp;' &amp;&amp;
+  nodeRight &amp;&amp;
+  nodeRight.type === 'MemberExpression' &amp;&amp;
+  !astUtil.isComputed(nodeRight) &amp;&amp;
+  (!toCompare || astUtil.<span class="apidocCodeKeywordSpan">isEquivalentExp</span>(nodeRight, toCompare));
+}
+
+const create = function (context) {
+const DEFAULT_LENGTH = 3;
+const ruleDepth = parseInt(context.options[0], 10) || DEFAULT_LENGTH;
+
+const expStates = [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.ast_util.isFunction" id="apidoc.element.eslint-plugin-lodash-fp.ast_util.isFunction">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.ast_util.</span>isFunction
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isFunction = function (){var n=arguments,e=n[0];if(o&amp;&amp;1==n.length&amp;&amp;af(e))return o.plant(e).value();for(var u=0,n=r?t[u].apply(this,n):e;++u&lt;r
+;)n=t[u].call(this,n);return n}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+'use strict';
+
+const enhance = require('./core/enhance');
+const astUtil = require('./core/ast-util');
+
+function getFunctionArgumentsLength(node) {
+  if (!node || !astUtil.<span class="apidocCodeKeywordSpan">isFunction</span>(node)) {
+    return false;
+  }
+
+  return node.params.length;
+}
+
+const create = function (context) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-lodash-fp.ast_util.isIdentityFunction" id="apidoc.element.eslint-plugin-lodash-fp.ast_util.isIdentityFunction">
+        function <span class="apidocSignatureSpan">eslint-plugin-lodash-fp.ast_util.</span>isIdentityFunction
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isIdentityFunction(node) {
+  if (!isFunction(node) || node.params.length !== 1 || !node.body) {
+    return false;
+  }
+  let returnedElement;
+  if (node.body.type === 'BlockStatement') {
+    const subBody = node.body.body;
+    if (subBody.length !== 1 || subBody[0].type !== 'ReturnStatement') {
+      return false;
+    }
+    returnedElement = subBody[0].argument;
+  } else {
+    returnedElement = node.body;
+  }
+
+  return returnedElement.type === 'Identifier' &amp;&amp;
+    returnedElement.name === node.params[0].name;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+const create = function (context) {
+const info = enhance();
+
+const isFilterCall = info.helpers.isMethodCallOf('filter');
+
+function isIdentity(node) {
+  return info.helpers.isMethodOf('identity', node) ||
+    astUtil.<span class="apidocCodeKeywordSpan">isIdentityFunction</span>(node);
+}
+
+function isFilterWithIdentity(node) {
+  return isFilterCall(node) &amp;&amp; isIdentity(node.arguments[0]);
+}
+
+return info.merge({
+...</pre></li>
+    </ul>
 
 
 </div>
