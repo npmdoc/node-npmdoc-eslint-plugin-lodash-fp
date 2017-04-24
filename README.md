@@ -1,4 +1,7 @@
-# api documentation for  [eslint-plugin-lodash-fp (v2.1.3)](https://github.com/jfmengels/eslint-plugin-lodash-fp#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-eslint-plugin-lodash-fp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-eslint-plugin-lodash-fp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-eslint-plugin-lodash-fp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-eslint-plugin-lodash-fp)
+# npmdoc-eslint-plugin-lodash-fp
+
+#### api documentation for  [eslint-plugin-lodash-fp (v2.1.3)](https://github.com/jfmengels/eslint-plugin-lodash-fp#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-eslint-plugin-lodash-fp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-eslint-plugin-lodash-fp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-eslint-plugin-lodash-fp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-eslint-plugin-lodash-fp)
+
 #### ESLint rules for lodash/fp
 
 [![NPM](https://nodei.co/npm/eslint-plugin-lodash-fp.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/eslint-plugin-lodash-fp)
@@ -92,7 +95,8 @@
     "xo": {
         "exnext": true,
         "space": 2
-    }
+    },
+    "bin": {}
 }
 ```
 
